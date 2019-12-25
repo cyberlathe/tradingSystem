@@ -3,7 +3,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import quickfix.*;
 
-public class FIXApplication implements quickfix.Application {
+public class FIXServerApplication implements quickfix.Application {
     public static final Logger logger = LoggerFactory.getLogger(Thread.currentThread().getClass().getName());
 
     public void onCreate(SessionID sessionID) {
@@ -31,6 +31,6 @@ public class FIXApplication implements quickfix.Application {
     }
 
     public void fromApp(Message message, SessionID sessionID) throws FieldNotFound, IncorrectDataFormat, IncorrectTagValue, UnsupportedMessageType {
-
+        logger.info("Message Received from SessionID: {}, Message: {}", sessionID, message);
     }
 }

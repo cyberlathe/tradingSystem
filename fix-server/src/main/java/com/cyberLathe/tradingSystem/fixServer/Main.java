@@ -2,7 +2,7 @@ package com.cyberLathe.tradingSystem.fixServer;
 import quickfix.*;
 import java.io.FileInputStream;
 
-public class FIXServer {
+public class Main {
     public static void main(String args[]) throws Exception {
         if (args.length != 1) return;
         String fileName = args[0];
@@ -12,7 +12,7 @@ public class FIXServer {
         LogFactory logFactory = new FileLogFactory(settings);
         MessageFactory messageFactory = new DefaultMessageFactory();
 
-        quickfix.Application application = new FIXApplication();
+        quickfix.Application application = new FIXServerApplication();
 
         Acceptor acceptor = new SocketAcceptor
                 (application, storeFactory, settings, logFactory, messageFactory);

@@ -30,7 +30,7 @@
     </dependencies>
 
     <properties>
-        <mainClass>com.cyberLathe.tradingSystem.fixClient.FIXClient</mainClass>
+        <mainClass>com.cyberLathe.tradingSystem.fixClient.Main</mainClass>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
