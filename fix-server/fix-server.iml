@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../fix-server/target/classes" />
+    <output-test url="file://$MODULE_DIR$/../fix-server/target/test-classes" />
+    <content url="file://$MODULE_DIR$/../fix-server">
+      <sourceFolder url="file://$MODULE_DIR$/../fix-server/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../fix-server/src/main/resources" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../fix-server/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://D:/software/org.quickfixj-2.1.1" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="file://D:/software/org.quickfixj-2.1.1/doc/api" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="file://D:/software/org.quickfixj-2.1.1" />
+          <root url="file://D:/software/org.quickfixj-2.1.1/org.quickfixj-2.1.1/quickfixj-codegenerator/src/main/java" />
+          <root url="file://D:/software/org.quickfixj-2.1.1/org.quickfixj-2.1.1/quickfixj-core/src/main/java" />
+          <root url="file://D:/software/org.quickfixj-2.1.1/org.quickfixj-2.1.1/quickfixj-core/src/test/java" />
+          <root url="file://D:/software/org.quickfixj-2.1.1/org.quickfixj-2.1.1/quickfixj-dictgenerator/src/main/java" />
+          <root url="file://D:/software/org.quickfixj-2.1.1/org.quickfixj-2.1.1/quickfixj-examples/banzai/src/main/java" />
+          <root url="file://D:/software/org.quickfixj-2.1.1/org.quickfixj-2.1.1/quickfixj-examples/executor/src/main/java" />
+          <root url="file://D:/software/org.quickfixj-2.1.1/org.quickfixj-2.1.1/quickfixj-examples/ordermatch/src/main/java" />
+        </SOURCES>
+        <jarDirectory url="file://D:/software/org.quickfixj-2.1.1" recursive="false" />
+        <jarDirectory url="file://D:/software/org.quickfixj-2.1.1" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.7.25" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.slf4j:slf4j-jdk14:1.7.25" level="project" />
+  </component>
+</module>

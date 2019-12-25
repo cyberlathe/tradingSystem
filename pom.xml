@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.cyberlathe</groupId>
+	<version>1.0.0</version>
+	<artifactId>trading-system</artifactId>
+	<packaging>pom</packaging>
+
+	<name>Sample Trading System</name>
+	<description>Sample Trading System Components</description>
+
+	<modules>
+		<module>fix-server</module>
+		<module>fix-client</module>
+        <module>transactions</module>
+    </modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.28</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-jdk14</artifactId>
+			<version>1.7.25</version>
+			<scope>runtime</scope>
+		</dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+			<version>1.7.25</version>
+        </dependency>
+
+	</dependencies>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>maven-bundle-plugin</artifactId>
+					<configuration>
+						<archive>
+							<manifest>
+							</manifest>
+							<manifestEntries>
+							</manifestEntries>
+						</archive>
+					</configuration>
+				</plugin>
+				<!-- create a self-executing jar (including all dependencies) -->
+				<plugin>
+					<artifactId>maven-shade-plugin</artifactId>
+					<executions>
+						<execution>
+							<id>create-self-executing-jar</id>
+							<phase>package</phase>
+							<goals>
+								<goal>shade</goal>
+							</goals>
+							<configuration>
+								<createDependencyReducedPom>false</createDependencyReducedPom>
+								<shadedArtifactAttached>true</shadedArtifactAttached>
+								<shadedClassifierName>standalone</shadedClassifierName>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
